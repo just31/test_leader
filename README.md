@@ -25,4 +25,4 @@ Learn more about how to configure allure - https://github.com/allure-framework/a
 
 
 
-Link to the demo of this AutoTest - 
+Link to the demo of this AutoTest - https://drive.google.com/file/d/1tB2xTEJzPv0kg0k0oC8fBEzauhw2zFPi/view?usp=sharing
