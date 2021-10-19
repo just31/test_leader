@@ -49,7 +49,7 @@ Finish the test
 
 Check Status 200
     [Arguments]    ${url}
-    ${response}     Get request        conn     ${url}
+    ${response}     GET On Session       conn     ${url}
                     Should be equal    ${response.status_code}    ${200}    msg=Статус данного запроса, не равен 200!
     ...                 msg=При выполнении GET ${url} был получен код состояния, отличный от 200 ОК.
 

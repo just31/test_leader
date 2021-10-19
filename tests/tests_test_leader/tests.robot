@@ -72,7 +72,7 @@ Getting information about users
     # Вызываем ключевое слово, проверяющее статус ответа, по указанному url. Он должен быть равен 200.
     Check Status 200        ${url}
     # Проверяем, после отправления get-запроса, что третье значение поля name, в data, равно 'true red'.
-    ${response}     Get request        conn     ${url}
+    ${response}     GET On Session        conn     ${url}
                     Should be equal    ${response.json()["data"][2]['name']}      true red       msg=Name of the third value in data, is not 'true red'!
     log to console      Status code = 200, Name of the third value in data, equal - 'true red'.
 
