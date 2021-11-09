@@ -42,8 +42,11 @@ Check google search
     # Вводим в строку поиска 'купить кофемашину bork c804' и нажимаем кнопку 'Поиск в Google'.
     Wait until Page Contains Element	${google_input_search}
     Press Key      xpath: ${google_input_search}        купить кофемашину bork c804
-    Wait Until Element Is Visible   xpath: ${google_button_search}    timeout=20s
-    Click Element   xpath: ${google_button_search}
+    # Wait Until Element Is Visible   xpath: ${google_button_search}    timeout=20s
+    # Click Element   xpath: ${google_button_search}
+
+    # Т.к. submit ${google_button_search}, перекрывает выпадающий список, вместо него нажимаем 'Enter'.
+    Press Key      xpath: ${google_input_search}    \\13
     sleep  5
 
     # Проверяем, что на странице результатов присутствует - mvideo.ru.

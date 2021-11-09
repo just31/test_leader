@@ -17,7 +17,7 @@ Variables       ${EXECDIR}${/}page_objects/Elements.py
 
 *** Variables ***
 # Создаем переменные с базовыми url, для тест-кейсов по ui и api автотестам.
-${url_ui}      http://google.com/
+${url_ui}      https://www.google.com/
 ${url_api}         https://reqres.in
 
 
