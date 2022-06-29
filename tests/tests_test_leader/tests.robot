@@ -51,7 +51,7 @@ Check google search
     sleep  5
 
     # Проверяем, что на странице результатов присутствует - mvideo.ru.
-    Page Should Contain     mvideo!.ru
+    Page Should Contain     mvideo.ru
     log to console      Страница с результатами содержит mvideo.ru.
 
      # Проверяем, что на странице результатов, результатов указанного поиска 'купить кофемашину bork c804', больше 10.
