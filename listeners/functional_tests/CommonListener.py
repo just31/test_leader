@@ -5,6 +5,7 @@ from urllib.parse import urlparse
 
 # Импортируем все необходимые функции из вспомогательного модуля utils:
 import sys
+
 sys.path.append("listeners/")
 from utils import *
 
@@ -26,6 +27,11 @@ class CommonListener(object):
             msg.html = True
 
             self.msg_level = msg.level
+
+            # Получаем скриншот страницы, где не прошел тест. Для вывода его в аллюре-отчетности.
+            s2l = BuiltIn().get_library_instance('SeleniumLibrary')
+            s2l.capture_page_screenshot()
+            s2l.close_browser()
 
             # Получаем переменные с текстом ошибки, для отравления его в слак. И с url странички.
             text_message = BuiltIn().get_variable_value('${text_message}')

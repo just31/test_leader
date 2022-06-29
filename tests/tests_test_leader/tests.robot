@@ -1,5 +1,6 @@
 *** Settings ***
 Documentation   Tests test leader.
+Library     ../../Library/SeleniumLibraryHelper.py
 # Подключаем файл с основными переменными и ключевыми словами из папки ${EXECDIR}${/}resources/.
 Resource        ${EXECDIR}${/}resources/functional_tests/resources.robot    # Ключевые слова, для данных автотестов.
 # Прописываем необходимые теги, для запуска данных тестов, в каких-либо тестовых наборах.
@@ -13,7 +14,7 @@ Default Tags    Smoke  Regression  Sanitaze  No_parallel
 Проверить поиск google
     [Tags]              Проверка работы поиска google
     # Основное ключевое слово, для данного тест-кейса.
-    Check google search        ${url_ui}
+     Check google search        ${url_ui}
 
 Получение информации о пользователях
     [Tags]              Информация о пользователях
