@@ -1,6 +1,5 @@
 *** Settings ***
 Documentation   Tests test leader.
-Library     ../../Library/SeleniumLibraryHelper.py
 # Подключаем файл с основными переменными и ключевыми словами из папки ${EXECDIR}${/}resources/.
 Resource        ${EXECDIR}${/}resources/functional_tests/resources.robot    # Ключевые слова, для данных автотестов.
 # Прописываем необходимые теги, для запуска данных тестов, в каких-либо тестовых наборах.

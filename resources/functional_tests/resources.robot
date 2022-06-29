@@ -12,6 +12,7 @@ Library	        Screenshot
 Library         RequestsLibrary
 Library         DateTime
 Library         String
+Library         ../../Library/SeleniumLibraryHelper.py
 # Подключаем общие для всех тестов, page object переменные.
 Variables       ${EXECDIR}${/}page_objects/Elements.py
 
