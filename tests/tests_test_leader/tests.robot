@@ -56,7 +56,7 @@ Check google search
      # Проверяем, что на странице результатов, результатов указанного поиска 'купить кофемашину bork c804', больше 10.
     Wait until Page Contains Element	${google_titles_result}
     ${titles_result_count}   Get Element Count   xpath: ${google_titles_result}
-    Should Be True	${titles_result_count} > 10        msg=Результатов по 'купить кофемашину bork c804' менее 10!
+    Should Be True	${titles_result_count} >= 10        msg=Результатов по 'купить кофемашину bork c804' менее 10!
     log to console      На странице результатов поиска google, результатов по 'купить кофемашину bork c804' - больше 10.
 
     # Если данное ключевое слово отработало без ошибок, создаем переменную ${success} со значением True, для продолжения теста.
