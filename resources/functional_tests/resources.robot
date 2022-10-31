@@ -4,7 +4,7 @@
 # Подключаем возможные необходимые, для работы библиотеки.
 *** Settings ***
 Documentation   Keywords for check work buttons
-Library         SeleniumLibrary
+Library         SeleniumLibrary    timeout=30.0    screenshot_root_directory=./screenshot     run_on_failure=Create Page Screenshot
 Library         Collections
 Library         DateTime
 Library         String
@@ -39,6 +39,16 @@ Finish the test
     # Закрываем браузер и завершаем тест.
     [Teardown]    Close Browser
     Sleep   2
+
+# Создание скриншотов в тесте, при сбое теста
+Create Page Screenshot
+    # Создание снимка экрана с помощью встроенного ключевого слова
+    Capture Page Screenshot
+    # Вставить нужное изображение в отчет, после скриншота
+    Log    <b style="color:#15c; font-size:16px;">Insert your image, after the screenshot:<b>	INFO	html=true
+    Log    <img src="/pictures/3.jpg" width="802px">    html=true
+    # Закрываем браузер
+    Close Browser
 
 
 # API:
